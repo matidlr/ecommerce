@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.Entities
 {
-    internal class Product : BaseEntity
+    public class Product : BaseEntity
     {
         public required string Name { get; set; }
         public required string Description { get; set; }

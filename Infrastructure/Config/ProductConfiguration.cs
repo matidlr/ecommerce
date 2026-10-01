@@ -1,10 +1,14 @@
+using Core.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 namespace Infrastructure.Config;
 
-{     public class ProductConfiguration : IEntityTypeConfiguration<Product>
+public class ProductConfiguration : IEntityTypeConfiguration<Product>
+{
+    public void Configure(EntityTypeBuilder<Product> modelBuilder)
     {
-        public void Configure(EntityTypeBuilder<Product> modelBuilder)
-        {
-            builder.Property(p => p.Price).HasColumnType("decimal(18,2)");
-        }
+        modelBuilder.Property(p => p.Price)
+            .HasColumnType("decimal(18,2)");
     }
 }

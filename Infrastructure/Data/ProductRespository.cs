@@ -32,8 +32,16 @@ public class ProductRepository(StoreContext context) : IProductRepository
        return await context.Products.FindAsync(id);
     }
 
-    public async Task<IReadOnlyList<Product>> GetProductsAsync()
+    public async Task<IReadOnlyList<Product>> GetProductsAsync(string? brand, string? type)
     {
+        var query = context.Products.AsQueryable();
+        if (!string.IsNullOrWhiteSpace(brand))
+            query = query.Where(p => p.Brand == brand);
+        
+        if (!string.IsNullOrWhiteSpace(type))
+            query = query.Where(p => p.Type == type);
+        
+
         return await context.Products.ToListAsync();
     }
 

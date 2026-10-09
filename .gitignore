@@ -3,3 +3,22 @@ bin/
 obj/
 API/appsettings.Development.json
 API/appsettings.json
+# Node.js
+node_modules/
+
+# Angular build output
+dist/
+.angular/
+coverage/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo

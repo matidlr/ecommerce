@@ -1,4 +1,4 @@
-using System;
+using System.Net;
 using System.ComponentModel.DataAnnotations;
 
 namespace API.DTOs;
@@ -10,7 +10,7 @@ public class CreateProductDto
     [Required]
     public string Description { get; set; } = string.Empty;
     [Range (0.01, double.MaxValue, ErrorMessage = "Price must be a positive number.")]
-    public decimal Price { get; set; } = string.Empty;
+    public decimal Price { get; set; }
     [Required]
     public string PictureUrl { get; set; }= string.Empty;
     [Required]
@@ -18,5 +18,5 @@ public class CreateProductDto
     [Required]
     public string Brand { get; set; }= string.Empty;
     [Range(0, int.MaxValue, ErrorMessage = "Quantity in stock must be a non-negative number.")]
-    public int QuantityStock { get; set; }
+    public int QuantityInStock { get; set; }
 }

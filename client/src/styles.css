@@ -17,3 +17,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .text-primary {
     @apply text-blue-700
 }
+
+.mdc-notched-outline__notch {
+    border-right-style: none !important
+}

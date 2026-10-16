@@ -1,10 +1,10 @@
 <header class="border-b p-3 w-full">
     <div class="flex align-middle items-center justify-between max-w-screen-2xl mx-auto">
-        <img src="/images/logo.png" alt="logo" class="h-10">
+        <img routerLink="/" src="/images/logo.png" alt="logo" class="h-10">
         <nav class="flex gap-3 my-2 uppercase text-2xl">
-            <a routerLink="/" class="text-gray-600 hover:text-gray-900">Home</a>
-            <a routerLink="/products" class="text-gray-600 hover:text-gray-900">Products</a>
-            <a routerLink="/cart" class="text-gray-600 hover:text-gray-900">Cart</a>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="text-gray-600 hover:text-gray-900">Home</a>
+            <a routerLink="/shop" routerLinkActive="active" class="text-gray-600 hover:text-gray-900">Shop</a>
+            <a routerLink="/contact" routerLinkActive="active"  class="text-gray-600 hover:text-gray-900">Contact</a>
         </nav>
         
         <div class="flex items-center gap-3">

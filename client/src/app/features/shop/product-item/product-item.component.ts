@@ -4,6 +4,7 @@ import { MatCardActions, MatCardContent, MatCardModule } from '@angular/material
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { CurrencyPipe } from '@angular/common';
 import { MatIcon } from '@angular/material/icon';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-product-item',
@@ -13,7 +14,9 @@ import { MatIcon } from '@angular/material/icon';
     MatButton, 
     MatCardActions, 
     MatCardContent, 
-    CurrencyPipe
+    CurrencyPipe,
+    MatButton,
+    RouterLink
   ],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.css'
